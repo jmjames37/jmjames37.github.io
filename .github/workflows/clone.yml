@@ -1,0 +1,20 @@
+name: Clone workflow
+
+on:
+  workflow_dispatch:
+jobs:
+  job_one:
+    name: clone
+    runs-on: Ubuntu-latest
+    steps:
+      - name: testing
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script: |
+            cd ../
+            cd pub
+            git clone https://github.com/jmjames37/jmjames37.github.io.git
