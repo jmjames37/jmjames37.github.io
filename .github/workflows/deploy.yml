@@ -19,6 +19,7 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
+              cd ../
+              cd pub
               cd jmjames37.github.io
               git pull
-              cp ./* ../../pub/ -f
