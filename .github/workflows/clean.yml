@@ -15,7 +15,5 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
-            cd ../
-            cd pub
 	    unalias rm
             rm -rf jmjames37.github.io
