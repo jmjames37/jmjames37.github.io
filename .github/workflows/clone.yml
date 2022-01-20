@@ -15,4 +15,6 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
+            cd ../
+            cd pub
             git clone https://github.com/jmjames37/jmjames37.github.io.git
